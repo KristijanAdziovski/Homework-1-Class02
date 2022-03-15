@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Homework3
+namespace Homework_2
 {
     internal class Program
     {
@@ -8,29 +8,27 @@ namespace Homework3
         {
             Console.WriteLine("Input first number");
             string numOne = Console.ReadLine();
-            Console.WriteLine("Input operator");
-            char operation = Convert.ToChar(Console.ReadLine());
             Console.WriteLine("Input second number");
+            string numTwo = Console.ReadLine();
+            Console.WriteLine("Input third number");
             string numThree = Console.ReadLine();
-            decimal firstNumber = decimal.Parse(numOne);
-            decimal secondNumber = decimal.Parse(numThree);
-            if(operation == '+')
+            Console.WriteLine("Input fourth number");
+            string numFour = Console.ReadLine();
+            decimal intNumOne = decimal.Parse(numOne);
+            decimal intNumTwo = decimal.Parse(numTwo);
+            decimal intNumThree = decimal.Parse(numThree);
+            decimal intNumFour = decimal.Parse(numFour);
+            decimal average = (intNumOne + intNumTwo + intNumThree + intNumFour) / 4;
+            if (intNumOne == 0 && intNumTwo == 0 && intNumThree == 0 && intNumFour == 0)
             {
-                Console.WriteLine(firstNumber + secondNumber);
+                Console.WriteLine("Error");
             }
-           else if(operation == '-')
+            else
             {
-                Console.WriteLine(firstNumber - secondNumber);
+                Console.WriteLine(average);
             }
-            else if (operation == '*')
-            {
-                Console.WriteLine(firstNumber * secondNumber);
-            }
-            else if(operation == '/')
-            {
-                Console.WriteLine(firstNumber / secondNumber);
-            }
-            else { Console.WriteLine("You input invalid operator"); }
+
+
         }
     }
 }
